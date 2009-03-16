@@ -32,10 +32,9 @@ To rozszerzenie ma w PECL status: %{_status}.
 
 %prep
 %setup -q -c
+mv %{_modname}-%{version}/* .
 
 %build
-cd %{_modname}-%{version}
-
 # libtool 2.2 build fix
 if [ -f '%{_aclocaldir}/ltsugar.m4' ]; then
 	cat "%{_aclocaldir}/ltsugar.m4" >> "config.m4"
@@ -52,7 +51,7 @@ phpize
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{php_sysconfdir}/conf.d,%{php_extensiondir}}
 
-install %{_modname}-%{version}/modules/%{_modname}.so $RPM_BUILD_ROOT%{php_extensiondir}
+install modules/%{_modname}.so $RPM_BUILD_ROOT%{php_extensiondir}
 cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{_modname}.ini
 ; Enable %{_modname} extension module
 extension=%{_modname}.so
