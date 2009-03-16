@@ -11,7 +11,7 @@ Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
 # Source0-md5:	7f10434a77be984b2f7cfba7ff031413
 URL:		http://pecl.php.net/package/%{_modname}/
 BuildRequires:	js-devel >= 1.7
-BuildRequires:	php-devel >= 3:5.3.0
+BuildRequires:	php-devel >= 4:5.3.0
 BuildRequires:	rpmbuild(macros) >= 1.344
 %{?requires_php_extension}
 Requires:	php-common >= 4:5.3.0
