@@ -5,7 +5,7 @@ Summary(pl.UTF-8):	%{_modname} - funkcje obsługujące UUID
 Name:		php-pecl-%{_modname}
 Version:	0.1.2
 Release:	1
-License:	PHP 2.02
+License:	PHP 3.01
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
 # Source0-md5:	7f10434a77be984b2f7cfba7ff031413
