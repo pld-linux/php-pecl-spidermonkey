@@ -1,14 +1,14 @@
 %define		_modname	spidermonkey
 %define		_status		beta
-Summary:	%{_modname} - UUID support functions
-Summary(pl.UTF-8):	%{_modname} - funkcje obsługujące UUID
+Summary:	%{_modname} - Spidermonkey JavaScript engine for PHP
+Summary(pl.UTF-8):	%{_modname} - silnik JavaScript Spidermonkey dla PHP
 Name:		php-pecl-%{_modname}
-Version:	0.1.2
+Version:	0.1.4
 Release:	1
 License:	PHP 3.01
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
-# Source0-md5:	7f10434a77be984b2f7cfba7ff031413
+# Source0-md5:	4f4a9d3558d1354e728ab168e11c35c5
 URL:		http://pecl.php.net/package/%{_modname}/
 BuildRequires:	js-devel >= 1.7
 BuildRequires:	php-devel >= 4:5.3.0
