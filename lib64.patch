@@ -1,0 +1,11 @@
+--- php-pecl-spidermonkey-1.0.0/spidermonkey-1.0.0/config.m4~	2012-04-19 05:50:36.000000000 +0200
++++ php-pecl-spidermonkey-1.0.0/spidermonkey-1.0.0/config.m4	2012-08-08 11:54:07.552281177 +0200
+@@ -36,7 +36,7 @@
+     done
+     # test for the libname independantely
+     for j in js mozjs mozjs185; do
+-      test -f $i/lib/lib$j.so && SPIDERMONKEY_LIBNAME=$j && break
++      test -f $i/lib64/lib$j.so && SPIDERMONKEY_LIBNAME=$j && break
+     done
+     test -f $i/include/$j/jsapi.h && break
+   done
