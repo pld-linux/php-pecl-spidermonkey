@@ -1,5 +1,5 @@
 %define		_modname	spidermonkey
-%define		_status		beta
+%define		_status		stable
 Summary:	%{_modname} - Spidermonkey JavaScript engine for PHP
 Summary(pl.UTF-8):	%{_modname} - silnik JavaScript Spidermonkey dla PHP
 Name:		php-pecl-%{_modname}
