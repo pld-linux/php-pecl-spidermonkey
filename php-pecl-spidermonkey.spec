@@ -10,7 +10,7 @@ Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
 # Source0-md5:	1a7a4043fa6c86bb7e3cb24e794c284b
 URL:		http://pecl.php.net/package/%{_modname}/
-BuildRequires:	js-devel >= 1.7
+BuildRequires:	js185-devel
 BuildRequires:	php-devel >= 4:5.3.0
 BuildRequires:	rpmbuild(macros) >= 1.344
 %{?requires_php_extension}
