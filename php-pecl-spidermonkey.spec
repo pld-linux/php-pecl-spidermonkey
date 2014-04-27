@@ -5,7 +5,7 @@ Summary:	%{modname} - Spidermonkey JavaScript engine for PHP
 Summary(pl.UTF-8):	%{modname} - silnik JavaScript Spidermonkey dla PHP
 Name:		%{php_name}-pecl-%{modname}
 Version:	1.0.0
-Release:	3
+Release:	4
 License:	PHP 3.01
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
