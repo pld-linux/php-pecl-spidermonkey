@@ -5,7 +5,7 @@ Summary:	%{modname} - Spidermonkey JavaScript engine for PHP
 Summary(pl.UTF-8):	%{modname} - silnik JavaScript Spidermonkey dla PHP
 Name:		%{php_name}-pecl-%{modname}
 Version:	1.0.0
-Release:	4
+Release:	5
 License:	PHP 3.01
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
@@ -16,9 +16,8 @@ BuildRequires:	%{php_name}-devel >= 4:5.3.0
 BuildRequires:	js185-devel
 BuildRequires:	rpmbuild(macros) >= 1.650
 %{?requires_php_extension}
-Requires:	php(core) >= 5.3.0
 Provides:	php(%{modname}) = %{version}
-Obsoletes:	php-pear-%{modname}
+Obsoletes:	php-pecl-spidermonkey < 1.0.0-4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -57,7 +56,7 @@ phpize
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{php_sysconfdir}/conf.d,%{php_extensiondir}}
 
-install modules/%{modname}.so $RPM_BUILD_ROOT%{php_extensiondir}
+install -p modules/%{modname}.so $RPM_BUILD_ROOT%{php_extensiondir}
 cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{modname}.ini
 ; Enable %{modname} extension module
 extension=%{modname}.so
