@@ -11,6 +11,8 @@ Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 # Source0-md5:	1a7a4043fa6c86bb7e3cb24e794c284b
 Patch0:		lib64.patch
+Patch1:		libx32.patch
+Patch2:		js187.patch
 URL:		http://pecl.php.net/package/spidermonkey
 BuildRequires:	%{php_name}-devel >= 4:5.3.0
 BuildRequires:	js187-devel
@@ -37,6 +39,10 @@ To rozszerzenie ma w PECL status: %{status}.
 %ifarch %{x8664}
 %patch0 -p1
 %endif
+%ifarch x32
+%patch1 -p1
+%endif
+%patch2 -p1
 mv %{modname}-%{version}/* .
 
 %build

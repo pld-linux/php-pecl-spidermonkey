@@ -1,0 +1,22 @@
+--- php-pecl-spidermonkey/spidermonkey-1.0.0/spidermonkey_context.c~	2012-04-19 05:50:36.000000000 +0200
++++ php-pecl-spidermonkey/spidermonkey-1.0.0/spidermonkey_context.c	2015-08-09 14:36:38.847523270 +0200
+@@ -153,7 +153,7 @@
+ 	
+ 	if (JS_EvaluateScript(intern->ct, intern->obj, script, script_len, script_name, 0, &rval) == JS_TRUE)
+ 	{
+-		if (rval != 0)
++		if (!JSVAL_IS_NULL(rval))
+ 		{
+ 			/* The script evaluated fine, convert the return value to PHP */
+ 			jsval_to_zval(return_value, intern->ct, &rval);
+--- php-pecl-spidermonkey/spidermonkey-1.0.0/spidermonkey.c~	2012-04-19 05:50:36.000000000 +0200
++++ php-pecl-spidermonkey/spidermonkey-1.0.0/spidermonkey.c	2015-08-09 14:50:54.204868805 +0200
+@@ -321,7 +321,7 @@
+ 	}
+ 	else if (JSVAL_IS_BOOLEAN(rval))
+ 	{
+-		if (rval == JSVAL_TRUE)
++		if (JSVAL_IS_TRUE(rval))
+ 		{
+ 			RETVAL_TRUE;
+ 		}
