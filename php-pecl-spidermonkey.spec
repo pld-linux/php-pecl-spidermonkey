@@ -13,7 +13,7 @@ Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 Patch0:		lib64.patch
 URL:		http://pecl.php.net/package/spidermonkey
 BuildRequires:	%{php_name}-devel >= 4:5.3.0
-BuildRequires:	js185-devel
+BuildRequires:	js187-devel
 BuildRequires:	rpmbuild(macros) >= 1.650
 %{?requires_php_extension}
 Provides:	php(%{modname}) = %{version}
