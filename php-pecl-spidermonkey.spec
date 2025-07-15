@@ -37,12 +37,12 @@ To rozszerzenie ma w PECL status: %{status}.
 %prep
 %setup -q -c
 %ifarch %{x8664}
-%patch0 -p1
+%patch -P0 -p1
 %endif
 %ifarch x32
-%patch1 -p1
+%patch -P1 -p1
 %endif
-%patch2 -p1
+%patch -P2 -p1
 mv %{modname}-%{version}/* .
 
 %build
